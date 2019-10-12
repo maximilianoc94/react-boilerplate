@@ -1,0 +1,28 @@
+@mixin boxShadow($blur) {
+  -webkit-box-shadow: 0px 0px $blur -1px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px $blur -1px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px $blur -1px rgba(0, 0, 0, 1);
+}
+
+// breakpoints
+$sm: 375px;
+$md: 768px;
+$lg: 1230px;
+
+@mixin media($class) {
+  @if $class == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: ($md)) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: ($lg)) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint mixin supports: sm, md, lg';
+  }
+}
