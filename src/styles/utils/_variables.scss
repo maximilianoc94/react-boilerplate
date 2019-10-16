@@ -1,7 +1,10 @@
-//Theme's color palette
-$dark: #042844;
-$headerbg: rgba(4, 28, 44, 0.2);
-$footerbg: rgba(255, 255, 255, 0.75);
-$white: #ffffff;
+$primary: #1C344D;
+$secondary: #00FFC1;
 
-$fontColor: $dark;
+$primary-gradient-overlay: linear-gradient(to right, #000000, rgba(0,0,0,0));
+$secondary-gradient-overlay:linear-gradient(to bottom right, #1C344D, #00FFC1);
+
+//Theme's color palette
+$dark: $primary;
+$grey: #F7F7F7;
+$white: #ffffff;

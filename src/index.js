@@ -6,6 +6,7 @@ import RouterComponent from './routes';
 import * as serviceWorker from './serviceWorker';
 import './styles/global.scss';
 import './i18n';
+import 'typeface-poppins';
 
 render(
   <Provider store={store}>
