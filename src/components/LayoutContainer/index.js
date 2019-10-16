@@ -1,6 +1,15 @@
 import React from 'react';
-import styles from './layout.module.scss';
+import Header from './header';
+import Footer from './footer';
 
-const LayoutContainer = ({ children }) => <div className={styles.container}>{children}</div>;
+const LayoutContainer = ({ location, children }) => {
+  return (
+    <>
+      <Header location={location} />
+      {children}
+      <Footer location={location} />
+    </>
+  );
+};
 
 export default LayoutContainer;

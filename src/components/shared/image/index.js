@@ -3,19 +3,24 @@ import PropTypes from 'prop-types';
 import ProgressiveImage from 'react-progressive-image';
 
 const propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.string,
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
 };
 
-function Image({ src, alt, className }) {
+const defaultProps = {
+  alt: 'No image',
+};
+
+function Image({ src, placeholder, alt, className }) {
   return (
-    <ProgressiveImage src={src} placeholder="tiny-image.jpg">
+    <ProgressiveImage src={src} placeholder={placeholder}>
       {(img) => <img src={img} alt={alt} className={className} />}
     </ProgressiveImage>
   );
 }
 
 Image.propTypes = propTypes;
+Image.defaultProps = defaultProps;
 
 export default Image;
