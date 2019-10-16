@@ -1,22 +1,10 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { Link } from '@reach/router';
+import React from 'react';
+import Section from '../../components/shared/section';
 
-import ErrorBoundary from '../../components/ErrorBoundary';
-import TestError from '../../components/TestError';
-import { addInitialLoad } from '../../redux/actions/sample';
+import styles from './Home.module.scss';
 
-import { landingBg } from './Home.module.scss';
-
-function Home(props) {
-  useEffect(() => {
-    props.addInitialLoad();
-  }, []);
-
-  return <section className={landingBg}>Hola</section>;
+function Home() {
+  return <Section className={styles.bg}>home page works</Section>;
 }
 
-export default connect(
-  null,
-  { addInitialLoad }
-)(Home);
+export default Home;

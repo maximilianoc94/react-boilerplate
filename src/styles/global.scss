@@ -1,3 +1,5 @@
+@import '../styles//utils/abstract';
+
 * {
   box-sizing: border-box;
 }
@@ -18,4 +20,14 @@ button {
   font-size: px2rem(14);
   line-height: px2rem(20);
   cursor: pointer;
+}
+
+.dark {
+  color: $white;
+  background-color: $dark;
+  transition: all 0.6s;
+  &:hover {
+    color: $dark;
+    background-color: $white;
+  }
 }

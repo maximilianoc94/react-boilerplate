@@ -8,9 +8,9 @@ const propTypes = {
   image: PropTypes.string,
 };
 
-function Section({ image, children }) {
+function Section({ image, children, className }) {
   return (
-    <section className={section}>
+    <section className={[section, className].join(' ')}>
       {image ? <Image src={image} className={bgImg} alt="Background Image" /> : null}
       {children}
     </section>

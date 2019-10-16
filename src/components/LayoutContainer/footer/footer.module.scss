@@ -1,0 +1,14 @@
+@import '../../../styles//utils/abstract';
+
+.footer {
+  width: 100%;
+  padding: px2rem(5) 5%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
